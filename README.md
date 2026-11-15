@@ -1,28 +1,29 @@
-[README.md](https://github.com/user-attachments/files/34869997/README.md)
 # JoJo's Bizarre Adventure — Static Tribute Site
 
-A responsive, single-page fan tribute built with plain HTML and CSS. No JavaScript or build tools are required.
+A responsive, single-page fan tribute built with plain HTML and CSS. The site includes a personal introduction, a look at Stand battles and JoJo's varied influences, a spoiler-marked Death Thirteen example, a guide to the nine manga parts, and source links.
 
 ## Files
 
 - `index.html` — page structure and written content
 - `style.css` — responsive layout, colors, typography, and decorative artwork
+- `.github/workflows/pages.yml` — automatic GitHub Pages deployment
+- `.gitattributes` and `.editorconfig` — consistent LF line endings across Windows and other platforms
 
-## Preview locally
+## Run locally on Windows
 
-1. Keep `index.html` and `style.css` in the same folder.
-2. Open `index.html` in a browser, or use the Live Server extension in Visual Studio Code.
+Keep `index.html` and `style.css` in the same folder. Open `index.html` in Edge, Chrome, or Firefox. No Node.js, Python, JavaScript build step, or package installation is required.
 
-The page imports Google Fonts over the internet; system font fallbacks are included if those fonts are unavailable.
+The stylesheet is linked in the document `<head>` with:
 
-## Publish with GitHub Pages
+```html
+<link rel="stylesheet" href="style.css">
+```
 
-1. Create a new GitHub repository (for example, `jojos-bizarre-adventure`).
-2. Upload `index.html` and `style.css` to the repository's root directory. You can also include this README.
-3. Open **Settings → Pages** in the repository.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Select the `main` branch and `/ (root)` folder, then save.
-6. After GitHub Pages finishes deploying, copy the published URL shown in the Pages section.
+The project uses UTF-8 text and LF line endings. The Git message `This diff contains a change in line endings from 'LF' to 'CRLF'.` is a formatting warning, not an HTML/CSS runtime error. The included `.gitattributes` and `.editorconfig` keep these files consistent. In Visual Studio Code, the line-ending indicator in the bottom-right should say `LF`.
+
+## Publish
+
+The repository includes a GitHub Actions workflow that publishes the site to GitHub Pages whenever a commit is pushed to `main`, and can also be run manually from the Actions tab. After the first successful run, the live website URL appears in the deployment summary and in **Settings → Pages**.
 
 ## Notes
 
